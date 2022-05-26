@@ -1,0 +1,12 @@
+<h1>File path: (movies) new.html.erb</h1>
+<h2>Create a new movie</h2>
+<%= simple_form_for @movie do |f| %>
+  <%= f.input :title %>
+  <%= f.input :overview %>
+  <%= f.input :poster_url %>
+  <%= f.input :rating %>
+  <%= f.submit %>
+<% end %>
+
+<br>
+<%= link_to 'Back', movies_path %>

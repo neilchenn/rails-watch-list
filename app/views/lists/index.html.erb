@@ -1,0 +1,25 @@
+<h1>File path: (lists) index.html.erb</h1>
+<h2>All lists</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lists.each do |list| %>
+      <tr>
+        <td><%= list.id %></td>
+        <td><%= list.name %></td>
+        <td><%= link_to 'Show', list %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New List', new_list_path %>

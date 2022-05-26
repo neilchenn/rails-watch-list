@@ -1,0 +1,53 @@
+<nav class="navbar navbar-dark bg-dark justify-content-end">
+  <button type="button" class="btn btn-light btn-outline-light">
+    <%= link_to 'New Bookmark', new_bookmark_path %>
+  </button>
+
+</nav>
+
+<div class="banner">
+  <h1>File path: (bookmarks) index.html.erb</h1>
+  <h2>All bookmarks</h2>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+  <% @bookmarks.each do |bookmark| %>
+    <h5 class="card-title"><%= bookmark.movie.title %></h5>
+    <p class="card-text"></p>
+  <% end %>
+    <%= link_to 'Show', bookmark, class: "btn btn-primary" %>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Comment</th>
+      <th>Movie</th>
+      <th>List</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bookmarks.each do |bookmark| %>
+      <tr>
+        <td><%= bookmark.id %></td>
+        <td><%= bookmark.comment %></td>
+        <td><%= bookmark.movie.title %></td>
+        <td><%= bookmark.list.name %></td>
+        <td><%= link_to 'Show', bookmark, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
+        <td><%= link_to 'Delete', bookmark_path(bookmark), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

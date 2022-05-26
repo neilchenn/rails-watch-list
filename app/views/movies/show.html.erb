@@ -1,0 +1,23 @@
+<h1>File path: (movies) show.html.erb</h1>
+<h2>Movie detail</h2>
+<br>
+
+<p>
+  <strong>Movie title:</strong>
+  <%= @movie.title %>
+</p>
+<p>
+  <strong>Movie overview:</strong>
+  <%= @movie.overview %>
+</p>
+<p>
+  <strong>Movie poster URL:</strong>
+  <%= @movie.poster_url %>
+</p>
+<p>
+  <strong>Movie rating:</strong>
+  <%= @movie.rating %>
+</p>
+<br>
+
+<%= link_to 'Back', movies_path %>
